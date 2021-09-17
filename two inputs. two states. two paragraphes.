@@ -1,0 +1,19 @@
+//Creatw two inputs. Let the text of the first input be displayed in the first paragraph, and the text of the second input - in the second paragraph.
+
+function App() {
+
+const [text1, setText1] = useState('');
+const [text2, setText2] = useState('');
+
+
+return <div>
+
+<input value={text1} onChange={event => setText1(event.target.value)}/>
+<input value={text2} onChange={event => setText2(event.target.value)}/>
+
+<p>здесь текст первого инпута: {text1}</p>
+<p>здесь текст второго инпута: {text2}</p>
+
+</div>
+
+}
