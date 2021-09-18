@@ -1,0 +1,21 @@
+// There are two inputs, two buttons and a paragraph. Let numbers be entered into inputs. By clicking on the first button, find the sum of the numbers, 
+and by clicking on the second button, find the multiply. Output the result in a paragraph.
+
+function App() {
+
+	const [value1, setValue1] = useState(0);
+	const [value2, setValue2] = useState(0);
+	const [result, setResult] = useState(0);
+
+		
+	return <div>
+
+		<input value={value1} onChange={(event) => setValue1(event.target.value)}/>
+		<input value={value2} onChange={(event) => setValue2(event.target.value)}/>
+		<button onClick={() => setResult(Number(value1)+Number(value2))}>cумма</button>
+		<button onClick={() => setResult(Number(value1)*Number(value2))}>произведение</button>
+		<p>итог: {result}</p>
+
+	</div>
+
+}
