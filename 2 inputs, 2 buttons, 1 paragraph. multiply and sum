@@ -1,5 +1,5 @@
 // There are two inputs, two buttons and a paragraph. Let numbers be entered into inputs. By clicking on the first button, find the sum of the numbers, 
-and by clicking on the second button, find the multiply. Output the result in a paragraph.
+// and by clicking on the second button, find the multiply. Output the result in a paragraph.
 
 function App() {
 
