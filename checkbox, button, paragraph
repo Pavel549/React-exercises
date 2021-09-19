@@ -1,0 +1,19 @@
+// There are a checkbox, button and paragraph. By clicking on the button, if the checkbox is checked, display the text of the greeting with the user in the paragraph, 
+// and if it is not checked - the text of the farewell.
+
+function App() {
+
+	const [checked, setChecked] = useState(true);
+	const [result, setResult] = useState(true);
+
+	return <div>
+
+		<input type='checkbox' checked={checked} onChange={() => setChecked(!checked)}/>
+
+		<button onClick={() => setResult(checked)}>нажми сюда</button>
+
+		<p>{result ? 'привет':'пока'}</p>
+
+	</div>;
+
+}
