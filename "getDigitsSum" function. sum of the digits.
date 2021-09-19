@@ -1,4 +1,5 @@
-Create a "getDigitsSum" function that will find the sum of the digits of the passed number. Use it to count the sum of the digits of the number 12345.
+// Create a "getDigitsSum" function that will find the sum of the digits of the passed number. 
+// Use it to count the sum of the digits of the number 12345.
 
 
 
