@@ -1,0 +1,21 @@
+// Let the array contains the list of the cities. Use a loop to display a drop-down list of these cities.
+
+
+
+function App() {
+	
+	const towns = ['moscow', 'kiev', 'piter', 'kazan', 'astrahan'];
+	const [value, setValue] = useState('');
+
+	const options = towns.map(function(town, index) {
+		return <option key={index}>{town}</option>;
+	});
+
+	return <div>
+		<select value={value} onChange={(event) => setValue(event.target.value)}>
+			{options}
+		</select>
+		<p>your choise: {value}</p>
+	</div>
+
+}
