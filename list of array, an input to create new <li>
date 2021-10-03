@@ -1,0 +1,27 @@
+// Output the elements of this array as a list of <ul>. Add an input to add a new <li>.
+
+function App() {
+
+const [value, setValue] = useState('');
+const [notes, setNotes] = useState(['a', 'b', 'c', 'd', 'e']);
+
+const result = notes.map(function(note, index) {
+	return <li key={index}>{note}</li>
+});
+
+function func(event) {
+	setNotes([...notes, value]);
+	setValue('');
+}
+
+return <ul>
+
+	<input value={value} onChange={event => setValue(event.target.value)}/>
+
+	<button onClick={func}>жми</button>
+
+	{result}
+
+</ul>
+
+}
