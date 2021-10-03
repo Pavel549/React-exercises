@@ -1,4 +1,4 @@
-// Output the elements of this array as a list of <ul>. Add an input to add a new <li>.
+// Output the elements of this array as a list of <ul>. Add an input to add a new <li>. After adding new <li>, input clears.
 
 function App() {
 
