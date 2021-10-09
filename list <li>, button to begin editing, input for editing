@@ -1,0 +1,25 @@
+// Output the elements of this array as a <ul> list. Under the list, implement an input for editing list items. At the end of each <li> create a button, 
+// by clicking on which the editing of this <li> will begin.
+
+
+function App() {
+
+const [notes, setNotes] = useState(['a', 'b', 'c', 'd', 'e']);
+const [editNum, setEditNum] = useState(null);
+
+const result = notes.map(function(note, index) {
+	return <li key={index}>{note}
+	<button onClick={() => setEditNum(index)}>редактируемый эл-нт: {index}</button>
+	</li>
+})
+	
+function change(event) {
+		setNotes([...notes.slice(0, editNum), event.target.value, ...notes.slice(editNum+1)]);
+}
+
+return <ul>
+	{result}
+	<input value={notes[editNum]} onChange={change}/>
+</ul>
+
+}
